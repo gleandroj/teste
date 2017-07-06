@@ -1,0 +1,78 @@
+// Fonts
+//import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+//@import "variables";
+
+@import "./header.component";
+@import "./avatar.component";
+@import "./card.component";
+
+body{
+  font-family: 'Roboto', sans-serif;
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.home-page{
+  background: url("http://wallpaperget.com/images/sky-hd-wallpaper-30.jpg") no-repeat;
+  position: fixed; right: 0;
+  display: block;
+  min-height: 100% !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+.btn {
+  padding: 1px 25px 1px 25px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  background: rgb(184, 184, 184);
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  height: 35px;
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, .4) !important;
+}
+
+.btn:active {
+  background: rgba(0, 0, 0, .5)  !important;
+}
+.btn.btn-cyan{
+  background: rgb(38, 163, 140) !important;
+}
+.btn-cyan:hover {
+  background: rgba(18, 153, 130, 1) !important;
+}
+
+.btn-cyan:active {
+  background: rgba(18, 123, 110, 1)  !important;
+}
+
+.card-block {
+  font-weight: bold;
+  vertical-align: center;
+  padding: 4px 4px 1px 4px;
+  font-size: 13px;
+  text-align: center;
+  background-color: #4CAF50;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  height: 20px;
+  width: 100%;
+}
+
+.title{
+  font-weight: bold; color: rgb(116, 116, 116);
+}
+
+.sub-title{
+  color: rgb(150, 150, 150);
+}
