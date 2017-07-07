@@ -1,33 +1,37 @@
-app-header {
-  padding: 10px;
-  margin: 10px;
-  background: red !important;
-  height: 200px;
-  min-width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 app-avatar {
-  width: 71px;
-  height: 71px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   background: #ebebeb;
   text-align: center;
-  padding: 3px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 app-avatar img {
-  width: 71px;
-  height: 71px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
 }
 
-app-card {
+div.app-card {
   padding: 10px;
   margin: 20px;
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: white !important;
   min-height: 200px;
   min-width: 90%;
   display: -webkit-box;
@@ -40,6 +44,8 @@ app-card {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   color: #000 !important;
 }
 
@@ -49,16 +55,29 @@ body {
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-}
-
-.home-page {
-  background: url("http://wallpaperget.com/images/sky-hd-wallpaper-30.jpg") no-repeat;
-  position: fixed;
+  position: absolute;
+  background: url("http://wallpaperget.com/images/sky-hd-wallpaper-30.jpg") no-repeat center center fixed;
+  background-size: cover;
   right: 0;
   display: block;
   min-height: 100% !important;
-  height: 100% !important;
-  width: 100% !important;
+}
+
+.home-page {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
 }
 
 .btn {
@@ -83,7 +102,7 @@ body {
 }
 
 .btn.btn-cyan {
-  background: #26a38c !important;
+  background: #26a38c;
 }
 
 .btn-cyan:hover {
@@ -92,6 +111,12 @@ body {
 
 .btn-cyan:active {
   background: #127b6e !important;
+}
+
+.btn:disabled,
+.btn-cyan:disabled,
+button:disabled {
+  background: rgba(0, 0, 0, 0.2) !important;
 }
 
 .card-block {
@@ -115,5 +140,67 @@ body {
 
 .sub-title {
   color: #969696;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.center {
+  -ms-flex-line-pack: center !important;
+      align-content: center !important;
+  -webkit-box-align: center  !important;
+      -ms-flex-align: center  !important;
+          align-items: center  !important;
+}
+
+.wrap {
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
+}
+
+.padding {
+  padding: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  .xs-all-center {
+    -ms-flex-line-pack: center !important;
+        align-content: center !important;
+    -webkit-box-align: center  !important;
+        -ms-flex-align: center  !important;
+            align-items: center  !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+
+  .xs-full-width {
+    min-width: 100% !important;
+  }
 }
 

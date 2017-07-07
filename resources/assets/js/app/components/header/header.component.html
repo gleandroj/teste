@@ -1,3 +1,38 @@
-<div class="header">
+<div class="app-card">
+
+    <div class="row wrap center xs-all-center" style="padding: 25px;">
+
+        <app-avatar url="$component.user.url_imagem"></app-avatar>
+
+        <div class="column wrap" style="margin-left: 25px; ">
+            <span class="title" style="margin: 5px;">{{ $component.user.nome }}</span>
+            <span class="sub-title" style="margin: 5px;">{{ $component.user.email }}</span>
+            <span class="card-block" style="margin: 5px; background: green; width: 130px;">{{ $component.user.envolvimento }}</span>
+        </div>
+    </div>
+
+    <div class="row wrap center xs-all-center" style="padding: 10px;">
+        <div style="flex-direction: column; display: flex; margin-left: 20px; ">
+            <span class="title" style="margin: 5px;">CPF</span>
+            <span class="sub-title" style="margin: 5px; ">{{ $component.user.cpf }}</span>
+        </div>
+
+        <div style="flex-direction: column; display: flex; margin-left: 20px; ">
+            <span class="title" style="margin: 5px;">Data de Cadastro</span>
+            <span class="sub-title" style="margin: 5px;">{{ $component.formatDate($component.user.created_at) }}</span>
+        </div>
+
+        <div style="flex-direction: column; display: flex; margin-left: 20px; ">
+            <span class="title" style="margin: 5px;">Último Envolvimento</span>
+            <span class="sub-title" style="margin: 5px;">{{ $component.formatDate($component.user.ultimo_envolvimento) }}</span>
+        </div>
+
+        <span style="display: flex; flex: .8;"></span>
+
+        <div class="row wrap center xs-all-center">
+            <button class="btn" style="margin-left: 20px;">Editar Dados</button>
+            <button ng-click="$component.enviarClick($event)" class="btn btn-cyan" style="margin-left: 20px; ">Enviar Título</button>
+        </div>
+    </div>
 
 </div>

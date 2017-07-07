@@ -1,0 +1,41 @@
+<ng-form name="tituloForm" >
+    <div class="app-card column wrap">
+
+        <div class="row wrap center">
+
+            <div style="flex-direction: column; display: flex; margin-left: 15px; ">
+                <span class="title" style="margin: 5px;">Títulos</span>
+            </div>
+
+        </div>
+
+
+        <table class="table" style="text-align: center;">
+            <thead>
+                <tr>
+                    <td class="title"><input type="checkbox" ></td>
+                    <td class="title" ><span class="glyphicon glyphicon-user"></span></td>
+                    <td class="title">Nome</td>
+                    <td class="title">E-mail</td>
+                    <td class="title">Vencimento</td>
+                    <td class="title">Valor</td>
+                    <td class="title"></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="titulo in $component.titulos">
+                    <td><input type="checkbox" ></td>
+                    <td class="row wrap center" style="justify-content: center;"><app-avatar style="width: 50px; height: 50px;" width="50px" height="50px" url="$component.user.url_imagem"></app-avatar></td>
+                    <td>{{ $component.user.nome }}</td>
+                    <td>{{ $component.user.email }}</td>
+                    <td>{{ $component.formatDate(titulo.vencimento) }}</td>
+                    <td>{{ titulo.valor }}</td>
+                    <td>
+                        <a ng-disabled="$component.disabled" ng-click="$component.deletarTitulo({titulo: titulo})"><span class="glyphicon glyphicon-trash"></span></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</ng-form>

@@ -2,10 +2,10 @@
  * Created by gasiq01 on 06/07/2017.
  */
 
-export * from './api.service';
+import apiService from './api.service';
 
 let servicesModule = angular.module('teste.services', []);
 
-//servicesModule.service();
+servicesModule.service('ApiService', apiService);
 
 export default servicesModule.name;

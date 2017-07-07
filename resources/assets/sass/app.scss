@@ -2,7 +2,7 @@
 //import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
-//@import "variables";
+@import "variables";
 
 @import "./header.component";
 @import "./avatar.component";
@@ -14,15 +14,25 @@ body{
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  position:absolute;
+  background: url("http://wallpaperget.com/images/sky-hd-wallpaper-30.jpg") no-repeat center center fixed;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  right: 0;
+  display: block;
+  min-height: 100% !important;
 }
 
 .home-page{
-  background: url("http://wallpaperget.com/images/sky-hd-wallpaper-30.jpg") no-repeat;
-  position: fixed; right: 0;
-  display: block;
-  min-height: 100% !important;
-  height: 100% !important;
-  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: auto;
 }
 .btn {
   padding: 1px 25px 1px 25px;
@@ -45,14 +55,16 @@ body{
   background: rgba(0, 0, 0, .5)  !important;
 }
 .btn.btn-cyan{
-  background: rgb(38, 163, 140) !important;
+  background: rgb(38, 163, 140);
 }
 .btn-cyan:hover {
   background: rgba(18, 153, 130, 1) !important;
 }
-
 .btn-cyan:active {
   background: rgba(18, 123, 110, 1)  !important;
+}
+.btn:disabled, .btn-cyan:disabled, button:disabled{
+  background: rgba(0 , 0, 0, .2) !important;
 }
 
 .card-block {
@@ -75,4 +87,44 @@ body{
 
 .sub-title{
   color: rgb(150, 150, 150);
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.column{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.center {
+  align-content: center !important;
+  align-items: center  !important;
+}
+
+.wrap {
+  flex-wrap: wrap !important;
+}
+
+.padding{
+  padding: 10px;
+}
+
+@media screen and (max-width: $xs-width) {
+
+  .xs-all-center{
+    align-content: center !important;
+    align-items: center  !important;
+    justify-content: center !important;
+  }
+
+  .xs-full-width{
+    min-width: 100% !important;
+  }
+
 }

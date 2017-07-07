@@ -1,1 +1,2 @@
-<img src="http://www.gadoo.com.br/wp-content/uploads/2014/06/1169.jpg">
+<img ng-if="$component.loaded" ng-style="{width: ($component.width || '70px'), height: ($component.height || '70px')}" height="{{ $component.height || '70px' }}" ng-src="{{ $component.url }}">
+<img ng-if="!$component.loaded" style="width: 30px; height: 30px;" ng-src="{{ $component.spinner }}">

@@ -1,0 +1,34 @@
+<ng-form name="tituloForm" >
+    <div class="app-card column wrap">
+
+        <div class="row wrap center">
+
+            <div style="flex-direction: column; display: flex; margin-left: 15px; ">
+                <span class="title" style="margin: 5px;">Enviar título</span>
+            </div>
+
+        </div>
+
+        <div class="row wrap center">
+
+            <div class="column wrap" style="margin-left: 15px;">
+                <span class="sub-title" style="margin: 5px;">Data de Vencimento</span>
+
+                <input ng-disabled="$component.disabled" ng-model="$component.titulo.vencimento" required type="date">
+            </div>
+
+            <div class="column wrap" style="margin-left: 15px;">
+                <span class="sub-title" style="margin: 5px;">Valor</span>
+
+                <input ng-disabled="$component.disabled" ng-model="$component.titulo.valor" required type="number">
+            </div>
+
+            <div class="column wrap center xs-full-width" style="justify-content: center; margin-left: 15px;">
+                <br/>
+                <button ng-click="$component.submit()" ng-disabled="tituloForm.$invalid || $component.disabled" class="btn btn-cyan">Enviar</button>
+            </div>
+
+        </div>
+
+    </div>
+</ng-form>
